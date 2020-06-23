@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f1faee;
+}
+
+body h1 {
+  width: 100%;
+  background: #d2dbf0;
+  text-align: center;
+  font-size: 42px;
+  font-family: sans-serif;
+  color: #1d3557;
+}
+
+body .btn {
+  width: 20%;
+  background: #2d6e96;
+  opacity: 0.9;
+  border-style: none;
+  font-size: 40px;
+  color: #f1faee;
+  font-family: serif;
+}
+
+body .btn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+body .datos {
+  width: 50%;
+}
+
+body .datos .entrada-datos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .datos .entrada-datos .caja-entrada {
+  width: 80%;
+  height: 80px;
+  padding-left: 5px;
+  font-size: 22px;
+  font-family: monospace;
+  color: #3b3b3b;
+  border-style: none;
+  background: #a8dadc;
+}
+
+body .mostrar-datos .dato-ingresado .contenido {
+  background: #f19664;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .mostrar-datos .dato-ingresado .contenido .texto-duro {
+  font-size: 28px;
+  font-family: monospace;
+  color: #3b3b3b;
+}
+
+body .mostrar-datos .dato-ingresado .contenido .btn {
+  background: none;
+
+  width: 60px;
+  font-family: "Gill Sans MT";
+}
+
+body .mostrar-datos .dato-ingresado .contenido .btn:hover {
+  cursor: pointer;
+  color: #c23131;
+}
+
+body .ruleta {
+  width: 50%;
+  background: #12adc2;
+}
+/*# sourceMappingURL=styles.css.map */
