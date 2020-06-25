@@ -7,9 +7,12 @@ body {
     // margin: 15px;
     box-sizing: border-box;
     background: #f1faee;
+    .contenedor-general {
+        display: flex;
+    }
     h1 {
         width: 100%;
-        background: #d2dbf0;
+        background: #d8e9d8;
         text-align: center;
         font-size: 42px;
         font-family: sans-serif;
@@ -49,10 +52,9 @@ body {
 
     .mostrar-datos {
         .dato-ingresado {
-            padding-bottom: 5px;
             .contenido {
                 background: #f19664;
-                padding: 10px 0;
+                padding: 12px 0;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -63,9 +65,9 @@ body {
                 }
 
                 .btn {
-                    background: #f19664;
+                    background: #f1956400;
                     width: 60px;
-                    font-family:  "Gill Sans MT";
+                    font-family: "Gill Sans MT";
 
                     &:hover {
                         cursor: pointer;
@@ -74,10 +76,66 @@ body {
                 }
             }
         }
-      }
+    }
+
+    @mixin letras($size) {
+        font-family: monospace;
+        font-size: $size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(59, 59, 59);
+    }
 
     .ruleta {
         width: 50%;
-        background: rgb(18, 173, 194);
+        height: 280px;
+        background: #eefde9;
+
+        .btnRuleta {
+            width: 100%;
+            height: 80px;
+            background: #bb8fce;
+            @include letras(24px);
+            &:hover {
+                background: #a164b9;
+                cursor: pointer;
+            }
+        }
+
+        .resultado {
+            animation-duration: 3s;
+            animation-name: slideout;
+        }
+
+       
+        @keyframes slideout {
+            from {
+                font-size: 62px;
+            }
+
+            to {
+                font-size: 28px;
+            }
+        }
+
+        #caja-resultado {
+            height: 70px;
+            background: rgb(201, 253, 194);
+            @include letras(28px);
+        }
+    }
+}
+@media only screen and (max-width: 800px) {
+    .contenedor-general{
+        display: flex;
+        flex-direction: column-reverse;
+        .datos{
+            width: 100%;
+        }
+        .ruleta{
+            width: 100%;
+            height: 100%;
+        }
     }
 }
